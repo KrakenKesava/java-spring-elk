@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ELK Stack Demo with Spring Boot</title>
+  <style>
+    body { font-family: Arial; padding: 2em; }
+    .card { border: 1px solid #ccc; border-left: 8px solid; margin-bottom: 1em; padding: 1em; border-radius: 6px; }
+    .success { border-color: green; }
+    .notfound { border-color: orange; }
+    .error { border-color: red; }
+    .btn { padding: 0.5em 1em; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 0.5em; display: inline-block; }
+    .btn:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>🔍 ELK Stack Demo with Spring Boot</h1>
+  <p>This Spring Boot app sends logs to the ELK Stack showing IPs and status codes.</p>
+
+  <div class="card success">
+    <h3>✅ Success (200)</h3>
+    <p>Returns a successful response</p>
+    <a href="/success" class="btn">Test Success Endpoint</a>
+  </div>
+
+  <div class="card notfound">
+    <h3>⚠️ Not Found (404)</h3>
+    <p>Returns a 404 error</p>
+    <a href="/not-found" class="btn">Test 404 Endpoint</a>
+  </div>
+
+  <div class="card error">
+    <h3>❌ Server Error (500)</h3>
+    <p>Returns a 500 error</p>
+    <a href="/server-error" class="btn">Test 500 Endpoint</a>
+  </div>
+
+  <div class="card">
+    <h3>🔄 Generate Random Traffic</h3>
+    <p>Click to randomly trigger 200, 404, or 500 responses</p>
+    <a href="/random" class="btn">Trigger Random</a>
+  </div>
+
+  <div class="card">
+    <h3>📊 View Logs in Kibana</h3>
+    <p><a href="http://localhost:5601" target="_blank">http://localhost:5601</a></p>
+    <p>Look for logs with IPs and HTTP status codes</p>
+  </div>
+</body>
+</html>
