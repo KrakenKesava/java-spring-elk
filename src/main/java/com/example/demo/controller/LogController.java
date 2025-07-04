@@ -52,6 +52,13 @@ public class LogController {
     }
   }
 
+  @PostMapping("/feedback")
+  @ResponseBody
+  public String submitFeedback(@RequestParam String feedback) {
+    logger.info("Feedback received: {}", feedback);
+    return "Thank you for your feedback: " + feedback;
+  }
+
   @ExceptionHandler(Exception.class)
   @ResponseBody
   public String handleError(Exception ex, HttpServletResponse response) {

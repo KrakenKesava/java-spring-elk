@@ -9,8 +9,9 @@
     .success { border-color: green; }
     .notfound { border-color: orange; }
     .error { border-color: red; }
-    .btn { padding: 0.5em 1em; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 0.5em; display: inline-block; }
+    .btn { padding: 0.5em 1em; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-top: 0.5em; display: inline-block; border: none; cursor: pointer; }
     .btn:hover { background: #0056b3; }
+    textarea { width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; font-family: Arial; resize: vertical; }
   </style>
 </head>
 <body>
@@ -45,6 +46,15 @@
     <h3>📊 View Logs in Kibana</h3>
     <p><a href="http://localhost:5601" target="_blank">http://localhost:5601</a></p>
     <p>Look for logs with IPs and HTTP status codes</p>
+  </div>
+
+  <div class="card">
+    <h3>💬 Feedback</h3>
+    <form action="/feedback" method="post">
+      <textarea name="feedback" placeholder="Enter your feedback here..." rows="4" cols="50" required></textarea>
+      <br><br>
+      <button type="submit" class="btn">Submit Feedback</button>
+    </form>
   </div>
 </body>
 </html>
